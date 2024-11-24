@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Upload Image and Caption</h1>
+            <form action="/process" method="POST" enctype="multipart/form-data">
+                <input type="file" name="image" accept="image/*" required>
+                <textarea name="caption" rows="4" placeholder="Enter product caption..." required></textarea>
+                <button type="submit">Generate Product Listing</button>
+            </form>
+        </div>
+
+        {% if result %}
+            <div class="result-container">
+                <div class="product-image">
+                    <img src="{{ url_for('static', filename='uploads/' + result['image']) }}" alt="Product Image">
+                </div>
+                <div class="product-details">
+                    <h2>{{ result['product_name'] }}</h2>
+                    <p>{{ result['description'] }}</p>
+                    <p class="price">{{ result['price'] }}</p>
+                    <ul>
+                        {% for feature in result['features'] %}
+                            <li>{{ feature }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: #f4f7fc;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+.form-container {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="file"] {
+    display: block;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Display section */
+.result-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.product-image {
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.product-details {
+    flex: 1;
+    padding: 15px;
+    background-color: #fafafa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-details h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.product-details p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.product-details ul {
+    list-style-type: none;
+}
+
+.product-details ul li {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.product-details .price {
+    font-size: 20px;
+    color: #28a745;
+    margin-top: 15px;
+}
