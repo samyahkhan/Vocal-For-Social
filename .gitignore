@@ -1,0 +1,16 @@
+# Ignore the virtual environment
+myenv/
+
+# Ignore Python bytecode
+__pycache__/
+
+# Ignore uploaded files (optional)
+static/uploads/
+
+# Ignore other common unnecessary files
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.log
+*.sqlite3
